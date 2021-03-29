@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
-    'mapwidgets',
     'sucursales',
 ]
 
@@ -111,7 +110,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+OPENWEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather'
+OPENWEATHER_API_KEY = '024a922a346961a84c07b144d742d002'
 
 STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT =  '/static/'

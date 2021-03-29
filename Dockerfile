@@ -4,12 +4,11 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update --fix-missing
 RUN apt-get install -y \
 	build-essential \
-	git-core \
-	pkg-config \
-	unzip \
-	software-properties-common
-
-RUN apt install -y gdal-bin python-gdal python3-gdal
+	python-dev \
+	gdal-bin \
+	python-gdal \
+	python3-gdal \
+	netcat
 
 RUN mkdir /code
 WORKDIR /code

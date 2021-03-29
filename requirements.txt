@@ -1,4 +1,6 @@
 Django==3.1
 httpretty==1.0.2
-urllib3==1.22
 psycopg2==2.8.6
+requests==2.25.1
+responses==0.13.1
+pytest==6.2.2

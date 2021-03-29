@@ -6,6 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile
     command: /bin/sh "./runner.sh"
+    environment:
+      - ADMIN_USERNAME=infuy
+      - ADMIN_PASSWORD=infuy
+      - ADMIN_EMAIL=infuy@infuy.com
     volumes:
       - ./infuy:/code
     ports:
