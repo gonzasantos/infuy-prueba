@@ -1,11 +1,11 @@
 from django.db import models
-from django.db.models.deletion import DO_NOTHING
-from django.db.models.fields.mixins import FieldCacheMixin
+from django.contrib.gis.db import models
 
 
 class Sucursal(models.Model):
     nombre = models.CharField(max_length=30, unique=True)
     direccion = models.CharField(max_length=30)
+    ubicacion = models.PointField(help_text="Use map widget for point the house location")
 
     def __str__(self):
         return "Nombre: "+self.nombre+", Direccion: "+self.direccion
@@ -44,6 +44,3 @@ class Afiliacion(models.Model):
 
     def __str__(self):
         return "Descuento: "+str(self.descuento)+"%"+", Fecha: "+str(self.fecha_alta)
-
-
-
